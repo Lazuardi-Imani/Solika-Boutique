@@ -2922,6 +2922,584 @@ body[data-event-theme] .brand-mark {
   color: #FFFFFF;
 }
 
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.cart-actions .cart-continue,
+.cart-actions .cart-checkout {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.cart-checkout {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 10px;
+        background: #b87591;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+      }
+  
+/* ========================================
+   SOLIKA BOUTIQUE - CHECKOUT
+   ======================================== */
+
+.checkout-form {
+  color: #5f4549;
+  font-family: inherit;
+}
+
+.checkout-form h3,
+.checkout-shipping-options h4 {
+  color: #965D67;
+  font-weight: 600;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 7px;
+  color: #76565d;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.checkout-form input:not([type="radio"]),
+.checkout-form textarea,
+.checkout-form select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ead6d8;
+  border-radius: 10px;
+  background: #fffdfb;
+  color: #5f4549;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.checkout-form input:not([type="radio"]):focus,
+.checkout-form textarea:focus,
+.checkout-form select:focus {
+  border-color: #B87882;
+  box-shadow: 0 0 0 3px rgba(184, 120, 130, 0.14);
+}
+
+.checkout-form input::placeholder,
+.checkout-form textarea::placeholder {
+  color: #b9a3a5;
+}
+
+.checkout-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.checkout-shipping-options {
+  margin-top: 22px;
+}
+
+.checkout-shipping-options h4 {
+  margin-bottom: 12px;
+}
+
+.checkout-shipping-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding: 14px;
+  border: 1px solid #ead6d8;
+  border-radius: 12px;
+  background: #fffdfb;
+  cursor: pointer;
+  transition: border-color 0.2s ease,
+              background 0.2s ease;
+}
+
+.checkout-shipping-option:has(input:checked) {
+  border-color: #B87882;
+  background: #fbf0f1;
+}
+
+.checkout-shipping-option input[type="radio"] {
+  accent-color: #965D67;
+  flex-shrink: 0;
+}
+
+.checkout-shipping-option span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checkout-shipping-option small {
+  color: #9b8185;
+  font-size: 12px;
+}
+
+.checkout-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  color: #76565d;
+  font-size: 14px;
+}
+
+.checkout-grand-total {
+  margin-top: 6px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f8e9eb;
+  color: #965D67;
+  font-size: 15px;
+}
+
+.checkout-grand-total strong {
+  font-size: 18px;
+}
+
+.checkout-shipping-note {
+  margin-top: 10px;
+  color: #9b8185;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.checkout-form button {
+  border-radius: 10px;
+  font-family: inherit;
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+}
+
+@media (max-width: 480px) {
+  .checkout-shipping-option {
+    gap: 8px;
+    padding: 12px 10px;
+  }
+
+  .checkout-shipping-option > strong {
+    font-size: 13px;
+  }
+
+  .checkout-grand-total strong {
+    font-size: 16px;
+  }
+}
+
+/* Pilihan metode pembayaran Solika Boutique */
+
+.checkout-payment-options {
+  margin-top: 24px;
+}
+
+.checkout-payment-options h4 {
+  margin-bottom: 6px;
+  color: #965D67;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.checkout-payment-description {
+  margin: 0 0 14px;
+  color: #9b8185;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.checkout-payment-option {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px !important;
+  padding: 14px;
+  border: 1px solid #ead6d8;
+  border-radius: 12px;
+  background: #fffdfb;
+  cursor: pointer;
+  transition: border-color 0.2s ease,
+              background 0.2s ease;
+}
+
+.checkout-payment-option:has(input:checked) {
+  border-color: #B87882;
+  background: #fbf0f1;
+}
+
+.checkout-payment-option input[type="radio"] {
+  flex-shrink: 0;
+  accent-color: #965D67;
+}
+
+.checkout-payment-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #F8E9EB;
+  font-size: 20px;
+}
+
+.checkout-payment-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checkout-payment-info strong {
+  color: #76565d;
+  font-size: 14px;
+}
+
+.checkout-payment-info small {
+  color: #9b8185;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+.checkout-destinations {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #ead6d8;
+  border-radius: 14px;
+  background: #fffdfb;
+}
+
+.checkout-destinations[hidden],
+.checkout-destinations [hidden] {
+  display: none !important;
+}
+
+.checkout-destinations h4 {
+  margin: 0 0 14px;
+  color: #965D67;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.checkout-destination-option {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px !important;
+  padding: 12px;
+  border: 1px solid #ead6d8;
+  border-radius: 11px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.checkout-destination-option:has(input:checked) {
+  border-color: #B87882;
+  background: #fbf0f1;
+}
+
+.checkout-destination-option input[type="radio"] {
+  flex-shrink: 0;
+  accent-color: #965D67;
+}
+
+.checkout-destination-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #F8E9EB;
+  color: #965D67;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.checkout-destination-detail {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checkout-destination-detail strong {
+  color: #76565d;
+  font-size: 14px;
+}
+
+.checkout-destination-detail small {
+  color: #9b8185;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.checkout-payment-group {
+  margin-bottom: 10px;
+}
+
+.checkout-payment-group > .checkout-payment-option {
+  margin-bottom: 0 !important;
+}
+
+.checkout-destinations-inline {
+  margin: 8px 0 4px 20px;
+  padding: 12px;
+  border-left: 2px solid #B87882;
+  border-radius: 0 10px 10px 0;
+  background: #fff8f8;
+}
+
+.checkout-destinations-inline[hidden] {
+  display: none !important;
+}
+
+.checkout-destinations-inline .checkout-destination-option {
+  margin-bottom: 8px !important;
+}
+
+.checkout-destinations-inline .checkout-destination-option:last-child {
+  margin-bottom: 0 !important;
+}
+
+
+/* Grup metode pembayaran utama */
+.checkout-payment-group {
+  margin-bottom: 10px;
+}
+
+/* Kartu utama tetap menggunakan desain yang sudah ada */
+.checkout-payment-group > .checkout-payment-option {
+  margin-bottom: 0 !important;
+}
+
+
+/* Area submenu: lebih menjorok ke kanan */
+.checkout-destinations-inline {
+  margin: 8px 0 8px 28px;
+  width: calc(100% - 28px);
+  box-sizing: border-box;
+  padding: 8px;
+  border-left: 2px solid #B87882;
+  border-radius: 0 9px 9px 0;
+  background: #fff8f8;
+}
+
+/* Submenu tersembunyi sepenuhnya */
+.checkout-destinations-inline[hidden] {
+  display: none !important;
+}
+
+/* Kartu pilihan bank dan e-wallet dibuat lebih rendah */
+.checkout-destinations-inline .checkout-destination-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 0;
+  margin: 0 0 5px !important;
+  padding: 7px 10px;
+  border: 1px solid #f0d9dc;
+  border-radius: 9px;
+  background: #ffffff;
+  font-size: 13px;
+  box-shadow: none;
+}
+
+/* Pilihan terakhir tidak memerlukan jarak tambahan */
+.checkout-destinations-inline
+.checkout-destination-option:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Logo tujuan pembayaran */
+.checkout-destinations-inline .checkout-destination-logo {
+  width: 28px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Radio submenu */
+.checkout-destinations-inline input[type="radio"] {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+
+/* Geser seluruh area submenu ke kanan */
+#checkoutBankList,
+#checkoutEwalletList {
+  display: block;
+  margin-left: 30px !important;
+  width: calc(100% - 30px) !important;
+  box-sizing: border-box !important;
+}
+
+/* Jangan tampilkan submenu yang sedang ditutup */
+#checkoutBankList[hidden],
+#checkoutEwalletList[hidden] {
+  display: none !important;
+}
+
+/* Geser setiap kartu pilihan agar benar-benar menjorok */
+#checkoutBankList .checkout-destination-option,
+#checkoutEwalletList .checkout-destination-option {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 6px !important;
+  min-height: 48px !important;
+  padding: 7px 10px !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+}
+
+/* Jarak pilihan terakhir */
+#checkoutBankList .checkout-destination-option:last-child,
+#checkoutEwalletList .checkout-destination-option:last-child {
+  margin-bottom: 0 !important;
+}
+
+
+/* Tambahkan jarak setelah submenu bank */
+#checkoutBankList {
+  margin-bottom: 18px !important;
+}
+
+/* Pastikan kartu metode berikutnya tidak menempel */
+#checkoutBankList + .checkout-payment-option,
+#checkoutBankList + .checkout-payment-group {
+  margin-top: 12px !important;
+}
+
+/* Beri jarak antargrup metode pembayaran utama */
+.checkout-payment-group {
+  margin-bottom: 12px !important;
+}
+
+.checkout-destination-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.checkout-destination-info strong {
+  font-size: 13px;
+  color: #965D67;
+}
+
+.checkout-destination-info small {
+  font-size: 11px;
+  color: #80676b;
+  overflow-wrap: anywhere;
+}
+
+/* Samakan tampilan submenu Bank dan E-Wallet */
+#checkoutBankList,
+#checkoutEwalletList {
+  display: block;
+  margin: 8px 0 18px 30px !important;
+  width: calc(100% - 30px) !important;
+  box-sizing: border-box !important;
+  padding: 8px !important;
+  border-left: 2px solid #B87882;
+  border-radius: 0 9px 9px 0;
+  background: #fff8f8;
+}
+
+/* Jangan tampilkan submenu ketika tertutup */
+#checkoutBankList[hidden],
+#checkoutEwalletList[hidden] {
+  display: none !important;
+}
+
+/* Samakan bentuk seluruh kartu pilihan */
+#checkoutBankList .checkout-destination-option,
+#checkoutEwalletList .checkout-destination-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100% !important;
+  min-height: 48px !important;
+  box-sizing: border-box !important;
+  margin: 0 0 6px !important;
+  padding: 7px 10px !important;
+  border: 1px solid #f0d9dc;
+  border-radius: 9px !important;
+  background: #ffffff;
+  box-shadow: none !important;
+  font-size: 13px;
+}
+
+/* Beri jarak bawah yang sama untuk pilihan terakhir */
+#checkoutBankList .checkout-destination-option:last-child,
+#checkoutEwalletList .checkout-destination-option:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Samakan ukuran logo */
+#checkoutBankList .checkout-destination-logo,
+#checkoutEwalletList .checkout-destination-logo {
+  width: 28px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Samakan format informasi penerima */
+#checkoutBankList .checkout-destination-info,
+#checkoutEwalletList .checkout-destination-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+#checkoutBankList .checkout-destination-info strong,
+#checkoutEwalletList .checkout-destination-info strong {
+  font-size: 13px;
+  color: #965D67;
+}
+
+#checkoutBankList .checkout-destination-info small,
+#checkoutEwalletList .checkout-destination-info small {
+  font-size: 11px;
+  color: #80676b;
+  overflow-wrap: anywhere;
+}
+
+/* Samakan ukuran radio */
+#checkoutBankList input[type="radio"],
+#checkoutEwalletList input[type="radio"] {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
 </style>
 </head>
 <body>
@@ -4050,6 +4628,582 @@ body[data-event-theme] .brand-mark {
     `;
 
     document.body.appendChild(overlay);
+  }
+
+
+  function showCheckout() {
+    const overlay = document.getElementById("cartOverlay");
+
+    if (!overlay) return;
+
+    // Pastikan keranjang tidak kosong
+    if (!cart.length) {
+      showToast("Keranjang belanja masih kosong.");
+      return;
+    }
+
+    const body = overlay.querySelector(".cart-drawer-body");
+    if (!body) return;
+
+    // Hitung subtotal berdasarkan isi keranjang saat ini
+    const subtotal = cart.reduce((total, item) => {
+      const product = products.find(p => p.name === item.name);
+
+      return total + (
+        product
+          ? Number(product.price) * item.quantity
+          : 0
+      );
+    }, 0);
+
+    // Ubah judul panel menjadi Checkout
+    const heading = overlay.querySelector(".cart-drawer-header h2");
+
+    if (heading) {
+      heading.textContent = "Checkout";
+    }
+
+    // Tampilkan formulir checkout
+    body.innerHTML = `
+      <div class="checkout-page">
+
+        <button
+          type="button"
+          class="cart-continue"
+          onclick="backToCart()"
+        >
+          ← Kembali ke Keranjang
+        </button>
+
+        <div class="checkout-heading">
+          <h3>Informasi Pengiriman</h3>
+          <p>Lengkapi data berikut untuk melanjutkan pesanan Anda.</p>
+        </div>
+
+        <form
+          id="checkoutForm"
+          class="checkout-form"
+          onsubmit="return false;"
+        >
+
+          <label for="checkoutName">
+            Nama Penerima
+          </label>
+          <input
+            type="text"
+            id="checkoutName"
+            name="customer_name"
+            placeholder="Masukkan nama lengkap"
+            autocomplete="name"
+            required
+          >
+
+          <label for="checkoutPhone">
+            Nomor WhatsApp
+          </label>
+          <input
+            type="tel"
+            id="checkoutPhone"
+            name="customer_phone"
+            placeholder="Contoh: 081234567890"
+            autocomplete="tel"
+            required
+          >
+
+          <label for="checkoutEmail">
+            Email <span>(opsional)</span>
+          </label>
+          <input
+            type="email"
+            id="checkoutEmail"
+            name="customer_email"
+            placeholder="nama@email.com"
+            autocomplete="email"
+          >
+
+          <label for="checkoutAddress">
+            Alamat Lengkap
+          </label>
+          <textarea
+            id="checkoutAddress"
+            name="customer_address"
+            placeholder="Nama jalan, nomor rumah, RT/RW, kelurahan, dan kecamatan"
+            autocomplete="street-address"
+            rows="3"
+            required
+          ></textarea>
+
+          <label for="checkoutCity">
+            Kota atau Kabupaten
+          </label>
+          <input
+            type="text"
+            id="checkoutCity"
+            name="customer_city"
+            placeholder="Masukkan kota atau kabupaten"
+            autocomplete="address-level2"
+            required
+          >
+
+          <label for="checkoutPostal">
+            Kode Pos
+          </label>
+          <input
+            type="text"
+            id="checkoutPostal"
+            name="customer_postal"
+            inputmode="numeric"
+            placeholder="Masukkan kode pos"
+            autocomplete="postal-code"
+            required
+          >
+
+          <label for="checkoutNotes">
+            Catatan Pesanan <span>(opsional)</span>
+          </label>
+          <textarea
+            id="checkoutNotes"
+            name="customer_notes"
+            placeholder="Catatan tambahan untuk pesanan Anda"
+            rows="2"
+          ></textarea>
+
+          <div class="checkout-order-summary">
+            <h3>Ringkasan Pesanan</h3>
+
+            <div class="checkout-order-items">
+              ${cart.map(item => {
+                const product = products.find(
+                  p => p.name === item.name
+                );
+
+                if (!product) return "";
+
+                return `
+                  <div class="checkout-order-item">
+                    <span>
+                      ${product.name} × ${item.quantity}
+                    </span>
+                    <strong>
+                      ${money(
+                        Number(product.price) * item.quantity
+                      )}
+                    </strong>
+                  </div>
+                `;
+              }).join("")}
+            </div>
+
+            <div class="checkout-total">
+              <span>Subtotal Produk</span>
+              <strong>${money(subtotal)}</strong>
+            </div>
+
+            <div class="checkout-shipping-options">
+              <h4>Pilih Pengiriman</h4>
+
+              <label class="checkout-shipping-option">
+                <input
+                  type="radio"
+                  name="checkoutShipping"
+                  value="regular"
+                  checked
+                  onchange="updateCheckoutShipping()"
+                >
+                <span>
+                  <strong>Reguler</strong>
+                  <small>Estimasi mengikuti layanan kurir</small>
+                </span>
+                <strong>Rp 15.000</strong>
+              </label>
+
+              <label class="checkout-shipping-option">
+                <input
+                  type="radio"
+                  name="checkoutShipping"
+                  value="express"
+                  onchange="updateCheckoutShipping()"
+                >
+                <span>
+                  <strong>Ekspres</strong>
+                  <small>Estimasi mengikuti layanan kurir</small>
+                </span>
+                <strong>Rp 25.000</strong>
+              </label>
+            </div>
+
+            <div class="checkout-total">
+              <span>Biaya Pengiriman</span>
+              <strong id="checkoutShippingCost">Rp 15.000</strong>
+            </div>
+
+            <div class="checkout-total checkout-grand-total">
+              <span>Total Pembayaran</span>
+              <strong id="checkoutGrandTotal">${money(subtotal + 15000)}</strong>
+            </div>
+
+            <p class="checkout-shipping-note">
+              Biaya di atas merupakan tarif sementara dan belum terhubung
+              dengan perhitungan ongkir kurir otomatis.
+            </p>
+
+            <div class="checkout-payment-options">
+              <h4>Metode Pembayaran</h4>
+
+              <p class="checkout-payment-description">
+                Pilih metode pembayaran yang paling nyaman untuk Anda.
+              </p>
+
+              <label class="checkout-payment-option">
+                <input
+                  type="radio"
+                  name="checkoutPayment"
+                  value="transfer"
+                  onclick="toggleCheckoutPayment(this)"
+                >
+                <span class="checkout-payment-icon">🏦</span>
+                <span class="checkout-payment-info">
+                  <strong>Transfer Bank</strong>
+                  <small>Konfirmasi pembayaran kepada admin</small>
+                </span>
+              </label>
+
+              <div id="checkoutBankList" hidden>
+              <label class="checkout-destination-option">
+                <input
+                  type="radio"
+                  name="checkoutDestination"
+                  value="BCA"
+                  onclick="toggleCheckoutDestination(this)"
+                >
+                <img
+                  class="checkout-destination-logo"
+                  src="bank-bca.jpg"
+                  alt="Logo BCA"
+                >
+                <span class="checkout-destination-info">
+                <strong>BCA</strong>
+                <small>Fitriana Solikah</small>
+                <strong><small>1234567890</small></strong>
+              </span>
+              </label>
+
+              <label class="checkout-destination-option">
+                <input
+                  type="radio"
+                  name="checkoutDestination"
+                  value="Mandiri"
+                  onclick="toggleCheckoutDestination(this)"
+                >
+                <img
+                  class="checkout-destination-logo"
+                  src="bank-mandiri.jpg"
+                  alt="Logo Mandiri"
+                >
+                <span class="checkout-destination-info">
+                <strong>Mandiri</strong>
+                <small>Fitriana Solikah</small>
+                <strong><small>1234567890</small></strong>
+              </span>
+              </label>
+
+              <label class="checkout-destination-option">
+                <input
+                  type="radio"
+                  name="checkoutDestination"
+                  value="BRI"
+                  onclick="toggleCheckoutDestination(this)"
+                >
+                <img
+                  class="checkout-destination-logo"
+                  src="bank-bri.jpg"
+                  alt="Logo BRI"
+                >
+                <span class="checkout-destination-info">
+                <strong>BRI</strong>
+                <small>Fitriana Solikah</small>
+                <strong><small>1234567890</small></strong>
+              </span>
+              </label>
+
+              <label class="checkout-destination-option">
+                <input
+                  type="radio"
+                  name="checkoutDestination"
+                  value="BNI"
+                  onclick="toggleCheckoutDestination(this)"
+                >
+                <img
+                  class="checkout-destination-logo"
+                  src="bank-bni.jpg"
+                  alt="Logo BNI"
+                >
+                <span class="checkout-destination-info">
+                <strong>BNI</strong>
+                <small>Fitriana Solikah</small>
+                <strong><small>1234567890</small></strong>
+              </span>
+              </label>
+
+              <label class="checkout-destination-option">
+                <input
+                  type="radio"
+                  name="checkoutDestination"
+                  value="BSI"
+                  onclick="toggleCheckoutDestination(this)"
+                >
+                <img
+                  class="checkout-destination-logo"
+                  src="bank-bsi.jpg"
+                  alt="Logo BSI"
+                >
+                <span class="checkout-destination-info">
+                <strong>BSI</strong>
+                <small>Fitriana Solikah</small>
+                <strong><small>1234567890</small></strong>
+              </span>
+              </label>
+            </div>
+
+              <label class="checkout-payment-option">
+                <input
+                  type="radio"
+                  name="checkoutPayment"
+                  value="ewallet"
+                  onclick="toggleCheckoutPayment(this)"
+                >
+                <span class="checkout-payment-icon">📱</span>
+                <span class="checkout-payment-info">
+                  <strong>E-Wallet</strong>
+                  <small>Dompet digital</small>
+                </span>
+              </label>
+
+              <div
+                id="checkoutEwalletList"
+                class="checkout-destinations-inline"
+                hidden
+              >
+              <label class="checkout-destination-option">
+                <input
+                  type="radio"
+                  name="checkoutDestination"
+                  value="Gopay"
+                  onclick="toggleCheckoutDestination(this)"
+                >
+                <img
+                  class="checkout-destination-logo"
+                  src="gopay.jpg"
+                  alt="Logo Gopay"
+                >
+                <span class="checkout-destination-info">
+                <strong>Gopay</strong>
+                <small>Fitriana Solikah</small>
+                <strong><small>1234567890</small></strong>
+              </span>
+              </label>
+
+              <label class="checkout-destination-option">
+                <input
+                  type="radio"
+                  name="checkoutDestination"
+                  value="Dana"
+                  onclick="toggleCheckoutDestination(this)"
+                >
+                <img
+                  class="checkout-destination-logo"
+                  src="dana.jpg"
+                  alt="Logo Dana"
+                >
+                <span class="checkout-destination-info">
+                <strong>Dana</strong>
+                <small>Fitriana Solikah</small>
+                <strong><small>1234567890</small></strong>
+              </span>
+              </label>
+
+              <label class="checkout-destination-option">
+                <input
+                  type="radio"
+                  name="checkoutDestination"
+                  value="OVO"
+                  onclick="toggleCheckoutDestination(this)"
+                >
+                <img
+                  class="checkout-destination-logo"
+                  src="ovo.jpg"
+                  alt="Logo OVO"
+                >
+                <span class="checkout-destination-info">
+                <strong>Ovo</strong>
+                <small>Fitriana Solikah</small>
+                <strong><small>1234567890</small></strong>
+              </span>
+              </label>
+              
+              <label class="checkout-destination-option">
+                <input
+                  type="radio"
+                  name="checkoutDestination"
+                  value="Shopeepay"
+                  onclick="toggleCheckoutDestination(this)"
+                >
+                <img
+                  class="checkout-destination-logo"
+                  src="shopeepay.jpg"
+                  alt="Logo Shopeepay"
+                >
+                <span class="checkout-destination-info">
+                <strong>Shopeepay</strong>
+                <small>Fitriana Solikah</small>
+                <strong><small>1234567890</small></strong>
+              </span>
+              </label>
+
+              <label class="checkout-destination-option">
+                <input
+                  type="radio"
+                  name="checkoutDestination"
+                  value="Linkaja"
+                  onclick="toggleCheckoutDestination(this)"
+                >
+                <img
+                  class="checkout-destination-logo"
+                  src="linkaja.jpg"
+                  alt="Logo Linkaja"
+                >
+                <span class="checkout-destination-info">
+                <strong>Linkaja</strong>
+                <small>Fitriana Solikah</small>
+                <strong><small>1234567890</small></strong>
+              </span>
+              </label>
+            </div>
+
+              <label class="checkout-payment-option">
+                <input
+                  type="radio"
+                  name="checkoutPayment"
+                  value="cod"
+                  onclick="toggleCheckoutPayment(this)"
+                >
+                <span class="checkout-payment-icon">📦</span>
+                <span class="checkout-payment-info">
+                  <strong>Bayar di Tempat (COD)</strong>
+                  <small>Jika tersedia untuk alamat Anda</small>
+                </span>
+              </label>
+            </div>
+
+          <div id="checkoutDestinations" class="checkout-destinations" hidden>
+            <h4 id="checkoutDestinationsTitle">Pilih Tujuan Pembayaran</h4>
+          </div>
+          </div>
+
+          <button
+            type="button"
+            class="cart-checkout"
+            disabled
+          >
+            Lanjut ke Pembayaran
+          </button>
+
+          <p class="checkout-stage-note">
+            Tahap berikutnya: pengaturan pengiriman dan pembayaran.
+          </p>
+
+        </form>
+      </div>
+    `;
+
+    updateCheckoutDestinations();
+
+    body.scrollTop = 0;
+  }
+
+  function backToCart() {
+    const overlay = document.getElementById("cartOverlay");
+
+    if (!overlay) return;
+
+    const body = overlay.querySelector(".cart-drawer-body");
+    if (!body) return;
+
+    // Kembalikan judul panel
+    const heading = overlay.querySelector(".cart-drawer-header h2");
+
+    if (heading) {
+      heading.textContent = "Keranjang Belanja";
+    }
+
+    // Tampilkan kembali keranjang berdasarkan data terkini
+    body.innerHTML = getCartContent();
+    body.scrollTop = 0;
+  }
+
+  function updateCheckoutShipping() {
+    const selectedShipping = document.querySelector(
+      'input[name="checkoutShipping"]:checked'
+    );
+
+    const shippingCostElement = document.getElementById(
+      "checkoutShippingCost"
+    );
+
+    const grandTotalElement = document.getElementById(
+      "checkoutGrandTotal"
+    );
+
+    if (!selectedShipping || !shippingCostElement || !grandTotalElement) {
+      return;
+    }
+
+    const shippingFee =
+      selectedShipping.value === "express" ? 25000 : 15000;
+
+    const subtotal = cart.reduce((total, item) => {
+      const product = products.find(p => p.name === item.name);
+
+      return total + (
+        product
+          ? Number(product.price) * item.quantity
+          : 0
+      );
+    }, 0);
+
+    shippingCostElement.textContent = money(shippingFee);
+    grandTotalElement.textContent = money(subtotal + shippingFee);
+  }
+
+  function updateCheckoutDestinations() {
+    const payment = document.querySelector(
+      'input[name="checkoutPayment"]:checked'
+    );
+
+    const bankList = document.getElementById("checkoutBankList");
+    const ewalletList = document.getElementById("checkoutEwalletList");
+
+    if (!bankList || !ewalletList) return;
+
+    bankList.hidden = true;
+    ewalletList.hidden = true;
+
+    if (!payment) return;
+
+    if (payment.value === "transfer") {
+      bankList.hidden = false;
+    } else if (payment.value === "ewallet") {
+      ewalletList.hidden = false;
+    }
+
+    if (payment.value === "cod") {
+      document.querySelectorAll(
+        'input[name="checkoutDestination"]'
+      ).forEach(input => {
+        input.checked = false;
+        input.dataset.wasChecked = "false";
+      });
+    }
   }
 
   function removeCartItem(index) {
@@ -5210,9 +6364,25 @@ window.scrollTo({ top: 0, behavior: "smooth" });
                 )}</strong>
               </div>
 
-              <button class="cart-continue" onclick="backToProducts()">
+            <div class="cart-actions">
+
+              <button
+                type="button"
+                class="cart-continue"
+                onclick="backToProducts()"
+              >
                 ← Lanjut Belanja
               </button>
+
+              <button
+                type="button"
+                class="cart-checkout"
+                onclick="showCheckout()"
+              >
+                Lanjut Checkout →
+              </button>
+            </div>
+
             </div>
           `
           : `
@@ -6868,6 +8038,49 @@ async function loadCategories() {
 }
 
 // loadCategories(); // Kategori dimuat melalui loadProductsFromSupabase()
+
+function toggleCheckoutPayment(input) {
+  // Radio ini sebelumnya sudah dipilih?
+  const wasChecked = input.dataset.wasChecked === "true";
+
+  // Reset status klik sebelumnya pada semua metode
+  document.querySelectorAll(
+    'input[name="checkoutPayment"]'
+  ).forEach(radio => {
+    radio.dataset.wasChecked = "false";
+  });
+
+  if (wasChecked) {
+    // Klik kedua: batalkan pilihan metode
+    input.checked = false;
+  } else {
+    // Klik pertama: pilih metode ini
+    input.checked = true;
+    input.dataset.wasChecked = "true";
+  }
+
+  updateCheckoutDestinations();
+}
+
+function toggleCheckoutDestination(input) {
+  const wasChecked = input.dataset.wasChecked === "true";
+
+  // Reset status klik sebelumnya pada semua tujuan pembayaran
+  document.querySelectorAll(
+    'input[name="checkoutDestination"]'
+  ).forEach(radio => {
+    radio.dataset.wasChecked = "false";
+  });
+
+  if (wasChecked) {
+    // Klik kedua: batalkan pilihan tujuan pembayaran
+    input.checked = false;
+  } else {
+    // Klik pertama: pilih tujuan pembayaran
+    input.checked = true;
+    input.dataset.wasChecked = "true";
+  }
+}
 
 
 </script>
